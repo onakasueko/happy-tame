@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>風水 開運カレンダー 2026年5月</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700;900&family=Zen+Antique+Soft&family=Shippori+Mincho+B1:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#fff0f4;--bg2:#ffe4ec;--bg3:#ffd6e7;--petal:#ffb8d0;
+  --rose:#e8637a;--rose-deep:#c0394f;--rose-light:#f8a0b4;
+  --gold:#c8882a;--gold-light:#e8b84a;--jade:#3a8a7a;
+  --ink:#3a1a22;--ink-mid:#7a3a4a;--ink-soft:#b07880;--white:#fff8fa;
+  --month-grad:linear-gradient(135deg,#cc5555,#aa2222);
+}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--bg);font-family:'Shippori Mincho B1','Noto Serif JP',serif;color:var(--ink);min-height:100vh;overflow-x:hidden;}
+.bg-deco{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 70% 50% at 10% 20%,rgba(255,180,200,0.35) 0%,transparent 60%),radial-gradient(ellipse 50% 60% at 90% 80%,rgba(255,150,180,0.25) 0%,transparent 60%);}
+.petal-deco{position:fixed;pointer-events:none;z-index:0;font-size:80px;opacity:0.06;user-select:none;}
+.petal-deco.p1{top:-10px;left:-20px;transform:rotate(-20deg);}
+.petal-deco.p2{top:40%;right:-30px;transform:rotate(30deg);font-size:120px;}
+.petal-deco.p3{bottom:5%;left:5%;transform:rotate(10deg);font-size:100px;}
+.page{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:48px 20px 80px;}
+.header{text-align:center;margin-bottom:40px;animation:fadeDown .9s ease both;}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-24px)}to{opacity:1;transform:translateY(0)}}
+.header-ribbon{display:inline-flex;align-items:center;gap:10px;background:var(--month-grad);color:#fff8fa;font-size:13px;letter-spacing:.35em;padding:8px 28px;border-radius:40px;margin-bottom:24px;box-shadow:0 4px 20px rgba(180,30,30,.3);}
+.header h1{font-family:'Zen Antique Soft',serif;font-size:clamp(36px,6vw,64px);line-height:1.15;margin-bottom:10px;background:linear-gradient(135deg,var(--rose-deep) 0%,var(--gold) 50%,var(--rose-deep) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:.06em;}
+.header-sub{font-size:16px;color:var(--ink-mid);letter-spacing:.25em;margin-bottom:16px;}
+.header-desc{font-size:14px;color:var(--ink-soft);letter-spacing:.1em;line-height:2;max-width:500px;margin:0 auto 24px;}
+.wuxing-row{display:flex;justify-content:center;gap:10px;margin-bottom:8px;flex-wrap:wrap;}
+.wuxing-badge{display:flex;flex-direction:column;align-items:center;background:var(--white);border:2px solid var(--petal);border-radius:16px;padding:12px 16px;min-width:76px;box-shadow:0 4px 16px rgba(232,99,122,.1);transition:transform .2s;}
+.wuxing-badge:hover{transform:translateY(-3px);}
+.wuxing-badge.active{border-color:var(--rose);background:rgba(232,99,122,.06);}
+.wuxing-badge .icon{font-size:24px;margin-bottom:5px;}
+.wuxing-badge .name{font-size:17px;color:var(--rose);font-weight:700;margin-bottom:2px;}
+.wuxing-badge .elem{font-size:11px;color:var(--ink-soft);letter-spacing:.1em;}
+.download-bar{display:flex;justify-content:center;gap:14px;margin:28px 0 36px;flex-wrap:wrap;}
+.btn-download{display:inline-flex;align-items:center;gap:10px;background:var(--month-grad);color:#fff8fa;border:none;border-radius:50px;padding:18px 40px;font-family:'Shippori Mincho B1',serif;font-size:17px;font-weight:700;letter-spacing:.2em;cursor:pointer;box-shadow:0 6px 28px rgba(180,30,30,.3);transition:all .25s;}
+.btn-download:hover{transform:translateY(-3px);box-shadow:0 10px 36px rgba(180,30,30,.45);}
+.btn-share{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--gold-light),var(--gold));color:var(--white);border:none;border-radius:50px;padding:18px 32px;font-family:'Shippori Mincho B1',serif;font-size:17px;font-weight:700;letter-spacing:.2em;cursor:pointer;box-shadow:0 6px 28px rgba(200,140,40,.3);transition:all .25s;}
+.btn-share:hover{transform:translateY(-3px);}
+.cal-container{background:var(--white);border-radius:28px;overflow:hidden;box-shadow:0 12px 60px rgba(232,99,122,.15);animation:fadeUp .7s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.cal-month-header{padding:32px 36px 24px;background:var(--month-grad);position:relative;overflow:hidden;}
+.cal-month-header::before{content:'';position:absolute;inset:0;opacity:.1;background-image:radial-gradient(circle,rgba(255,255,255,.7) 1px,transparent 1px);background-size:24px 24px;}
+.month-header-inner{display:flex;align-items:flex-end;gap:20px;flex-wrap:wrap;position:relative;z-index:1;}
+.month-big-num{font-family:'Zen Antique Soft',serif;font-size:88px;line-height:1;color:rgba(255,255,255,.92);text-shadow:0 4px 20px rgba(0,0,0,.18);}
+.month-big-info{padding-bottom:14px;}
+.month-kanji-label{font-size:24px;color:rgba(255,255,255,.92);letter-spacing:.2em;display:block;margin-bottom:6px;}
+.month-eto-label{font-size:15px;color:rgba(255,255,255,.75);letter-spacing:.15em;display:block;}
+.month-color-tip{margin-left:auto;padding-bottom:14px;text-align:right;}
+.color-tip-label{font-size:12px;color:rgba(255,255,255,.7);letter-spacing:.2em;display:block;margin-bottom:4px;}
+.color-tip-val{font-size:17px;color:rgba(255,255,255,.95);letter-spacing:.1em;display:block;font-weight:700;}
+.cal-dow-row{display:grid;grid-template-columns:repeat(7,1fr);border-bottom:2px solid var(--bg3);}
+.cal-dow{text-align:center;padding:14px 4px;font-size:15px;font-weight:700;letter-spacing:.15em;color:var(--ink-mid);}
+.cal-dow.sun{color:var(--rose-deep);} .cal-dow.sat{color:#6080c8;}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);}
+.cal-cell{min-height:120px;border-right:1px solid rgba(255,180,200,.35);border-bottom:1px solid rgba(255,180,200,.35);padding:12px 10px 8px;cursor:pointer;position:relative;transition:background .2s;overflow:hidden;}
+.cal-cell:nth-child(7n){border-right:none;}
+.cal-cell:hover{background:rgba(255,180,200,.15);}
+.cal-cell.empty{background:rgba(255,220,230,.15);cursor:default;}
+.cal-cell.today{background:rgba(232,99,122,.08);}
+.cal-cell.today::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--month-grad);}
+.cal-cell.lucky-day{background:rgba(200,140,40,.06);}
+.cal-cell.lucky-day::after{content:'✦';position:absolute;top:8px;right:8px;color:var(--gold);font-size:12px;}
+.day-num{font-family:'Zen Antique Soft',serif;font-size:28px;font-weight:400;color:var(--ink);display:block;margin-bottom:4px;line-height:1;}
+.cal-cell.sun .day-num{color:var(--rose-deep);} .cal-cell.sat .day-num{color:#5a72c0;}
+.day-eto{font-size:13px;color:var(--gold);display:block;margin-bottom:4px;letter-spacing:.04em;font-weight:700;}
+.day-rokuyo{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:20px;letter-spacing:.05em;margin-bottom:4px;}
+.ry-taian{background:rgba(200,140,40,.15);color:var(--gold);}
+.ry-tomobiki{background:rgba(100,120,210,.12);color:#6070c0;}
+.ry-sensho{background:rgba(58,138,122,.12);color:var(--jade);}
+.ry-senbu{background:rgba(160,120,60,.12);color:#9a7040;}
+.ry-butsumetsu{background:rgba(200,60,80,.1);color:var(--rose-deep);}
+.ry-shakku{background:rgba(120,100,100,.1);color:var(--ink-soft);}
+.day-color-tip{font-size:11px;color:var(--ink-soft);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.cal-legend{display:flex;flex-wrap:wrap;gap:16px;padding:16px 24px;background:var(--bg);border-top:1px solid var(--bg3);}
+.legend-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-mid);}
+.legend-dot{width:14px;height:14px;border-radius:4px;}
+.fengshui-section{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media(max-width:600px){.fengshui-section{grid-template-columns:1fr;}}
+.fs-main-card{grid-column:1/-1;border-radius:24px;padding:36px 32px;display:flex;align-items:flex-start;gap:24px;flex-wrap:wrap;color:var(--white);position:relative;overflow:hidden;background:var(--month-grad);}
+.fs-main-card::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle fill='rgba(255,255,255,0.05)' cx='30' cy='30' r='20'/%3E%3C/svg%3E");background-size:60px;}
+.fs-card-icon{font-size:52px;flex-shrink:0;position:relative;z-index:1;}
+.fs-card-content{flex:1;min-width:200px;position:relative;z-index:1;}
+.fs-card-title{font-size:22px;font-weight:700;letter-spacing:.15em;margin-bottom:10px;display:block;}
+.fs-card-body{font-size:16px;line-height:2;letter-spacing:.06em;opacity:.92;}
+.fs-sub-card{background:var(--white);border-radius:20px;padding:28px 24px;box-shadow:0 4px 24px rgba(232,99,122,.1);border:2px solid var(--bg3);transition:transform .2s,box-shadow .2s;}
+.fs-sub-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(232,99,122,.18);}
+.fs-sub-icon{font-size:32px;margin-bottom:10px;display:block;}
+.fs-sub-title{font-size:16px;font-weight:700;letter-spacing:.2em;color:var(--rose-deep);margin-bottom:10px;display:block;}
+.fs-sub-body{font-size:15px;color:var(--ink-mid);line-height:1.9;letter-spacing:.05em;}
+.fs-compass-card{background:var(--white);border-radius:20px;padding:28px 24px;box-shadow:0 4px 24px rgba(232,99,122,.1);border:2px solid var(--bg3);display:flex;flex-direction:column;align-items:center;}
+.compass-ring{width:140px;height:140px;border-radius:50%;border:3px solid var(--petal);display:flex;align-items:center;justify-content:center;position:relative;margin:12px 0;}
+.compass-inner{width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,var(--bg2),var(--petal));display:flex;align-items:center;justify-content:center;font-size:28px;}
+.compass-dir{position:absolute;font-size:13px;font-weight:700;color:var(--rose-deep);}
+.compass-dir.n{top:-2px;left:50%;transform:translateX(-50%);}
+.compass-dir.s{bottom:-2px;left:50%;transform:translateX(-50%);}
+.compass-dir.e{right:-2px;top:50%;transform:translateY(-50%);}
+.compass-dir.w{left:-2px;top:50%;transform:translateY(-50%);}
+.cta-banner{margin-top:48px;background:linear-gradient(135deg,rgba(232,99,122,.1),rgba(255,184,208,.2));border:2px solid var(--petal);border-radius:24px;padding:40px 36px;text-align:center;}
+.cta-title{font-size:22px;font-weight:700;color:var(--rose-deep);letter-spacing:.15em;margin-bottom:12px;}
+.cta-body{font-size:15px;color:var(--ink-mid);line-height:2;letter-spacing:.08em;margin-bottom:28px;}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--rose),var(--rose-deep));color:var(--white);border:none;border-radius:50px;padding:18px 48px;font-family:'Shippori Mincho B1',serif;font-size:18px;font-weight:700;letter-spacing:.2em;cursor:pointer;box-shadow:0 6px 28px rgba(200,60,80,.35);transition:all .25s;}
+.cta-btn:hover{transform:translateY(-3px);}
+.cta-small{font-size:13px;color:var(--ink-soft);margin-top:14px;letter-spacing:.1em;}
+.footer{text-align:center;margin-top:60px;padding-top:36px;border-top:2px solid var(--bg3);}
+.footer-flower{font-size:28px;margin-bottom:10px;}
+.footer p{font-size:13px;color:var(--ink-soft);letter-spacing:.12em;line-height:2.2;}
+.modal-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(58,26,34,.6);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal-box{background:var(--white);border-radius:28px;max-width:440px;width:100%;overflow:hidden;box-shadow:0 24px 80px rgba(200,60,80,.25);animation:modalPop .3s cubic-bezier(.34,1.56,.64,1) both;}
+@keyframes modalPop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+.modal-top{padding:28px 28px 20px;color:var(--white);position:relative;background:var(--month-grad);}
+.modal-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,.2);border:none;color:white;width:32px;height:32px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.modal-close:hover{background:rgba(255,255,255,.35);}
+.modal-date-str{font-size:14px;opacity:.8;letter-spacing:.2em;margin-bottom:6px;}
+.modal-eto-str{font-family:'Zen Antique Soft',serif;font-size:32px;margin-bottom:8px;}
+.modal-body{padding:24px 28px 28px;}
+.modal-row{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start;}
+.modal-row-icon{font-size:24px;flex-shrink:0;margin-top:2px;}
+.modal-row-label{font-size:12px;color:var(--ink-soft);letter-spacing:.2em;margin-bottom:4px;}
+.modal-row-val{font-size:16px;color:var(--ink);line-height:1.8;letter-spacing:.05em;}
+.modal-divider{height:1px;background:var(--bg3);margin:16px 0;}
+.modal-lucky-banner{background:linear-gradient(135deg,rgba(200,136,42,.1),rgba(232,184,74,.15));border:1px solid rgba(200,136,42,.3);border-radius:12px;padding:12px 16px;font-size:14px;color:var(--gold);letter-spacing:.1em;text-align:center;font-weight:700;}
+@media(max-width:600px){
+  .cal-cell{min-height:84px;padding:7px 5px;} .day-num{font-size:20px;} .day-eto{font-size:11px;}
+  .day-rokuyo{font-size:10px;} .day-color-tip{display:none;} .month-big-num{font-size:60px;}
+  .fs-main-card{padding:24px 20px;} .cta-banner{padding:28px 20px;} .month-color-tip{display:none;}
+}
+</style>
+</head>
+<body>
+<div class="bg-deco"></div>
+<div class="petal-deco p1">🌸</div><div class="petal-deco p2">🌺</div><div class="petal-deco p3">🌸</div>
+<div class="page">
+<header class="header">
+  <div class="header-ribbon">🔥 2026年 5月号 ✦ 毎月配信 風水開運カレンダー 🔥</div>
+  <h1>風水開運<br>カレンダー</h1>
+  <div class="header-sub">2026年 五月 ✦ 癸巳月</div>
+  <p class="header-desc">天の気・地の気・人の気が調和するとき<br>運命の扉は自然と開かれる</p>
+  <div class="wuxing-row"><div class="wuxing-badge"><span class="icon">🌳</span><span class="name">木</span><span class="elem">春・東</span></div><div class="wuxing-badge active"><span class="icon">🔥</span><span class="name">火</span><span class="elem">夏・南</span></div><div class="wuxing-badge"><span class="icon">🌍</span><span class="name">土</span><span class="elem">中央</span></div><div class="wuxing-badge"><span class="icon">⚡</span><span class="name">金</span><span class="elem">秋・西</span></div><div class="wuxing-badge"><span class="icon">💧</span><span class="name">水</span><span class="elem">冬・北</span></div></div>
+</header>
+
+<div class="cal-container">
+  <div class="cal-month-header">
+    <div class="month-header-inner">
+      <span class="month-big-num">5</span>
+      <div class="month-big-info">
+        <span class="month-kanji-label">五月</span>
+        <span class="month-eto-label">月干支：壬辰 ✦ 水と土の交差</span>
+      </div>
+      <div class="month-color-tip">
+        <span class="color-tip-label">今月の吉色</span>
+        <span class="color-tip-val">赤 · オレンジ · 金</span>
+      </div>
+    </div>
+  </div>
+  <div class="cal-dow-row">
+    <div class="cal-dow sun">日</div><div class="cal-dow">月</div><div class="cal-dow">火</div>
+    <div class="cal-dow">水</div><div class="cal-dow">木</div><div class="cal-dow">金</div>
+    <div class="cal-dow sat">土</div>
+  </div>
+  <div class="cal-grid" id="cal-grid"></div>
+  <div class="cal-legend">
+    <div class="legend-item"><div class="legend-dot" style="background:rgba(200,140,40,.25)"></div>大安</div>
+    <div class="legend-item"><div class="legend-dot" style="background:rgba(90,110,200,.2)"></div>友引</div>
+    <div class="legend-item"><div class="legend-dot" style="background:rgba(58,138,122,.2)"></div>先勝</div>
+    <div class="legend-item"><div class="legend-dot" style="background:rgba(200,60,80,.15)"></div>仏滅</div>
+    <div class="legend-item" style="color:var(--gold);font-weight:700;">✦ 吉日</div>
+  </div>
+</div>
+<div class="fengshui-section">
+  <div class="fs-main-card">
+    <div class="fs-card-icon">🔥</div>
+    <div class="fs-card-content">
+      <span class="fs-card-title">5月の風水テーマ ─ 壬辰の水土・情熱と創造</span>
+      <p class="fs-card-body">火の気が盛んになり、創造力と行動力が高まる月。南方位の部屋に赤やオレンジのアイテムを置くと情熱運アップ。キャンドルを灯す習慣も◎。新しいことへの挑戦に最良の月です。</p>
+    </div>
+  </div>
+  <div class="fs-sub-card">
+    <span class="fs-sub-icon">🧭</span>
+    <span class="fs-sub-title">吉方位の活かし方</span>
+    <p class="fs-sub-body">南方向に赤や明るい色を置く<br><br>今月の吉方位：<strong style="color:var(--rose-deep)">南</strong><br><br>南側の窓を開け、太陽の気を積極的に取り込みましょう。</p>
+  </div>
+  <div class="fs-compass-card">
+    <span style="font-size:16px;font-weight:700;letter-spacing:.2em;color:var(--rose-deep);display:block;margin-bottom:8px;">今月の吉方位</span>
+    <div class="compass-ring">
+      <span class="compass-dir n">北</span><span class="compass-dir s">南</span>
+      <span class="compass-dir e">東</span><span class="compass-dir w">西</span>
+      <div class="compass-inner">🔥</div>
+    </div>
+    <p style="font-size:16px;color:var(--rose-deep);font-weight:700;letter-spacing:.1em;">南方位</p>
+    <p style="font-size:13px;color:var(--ink-soft);margin-top:6px;">五行：火</p>
+  </div>
+  <div class="fs-sub-card">
+    <span class="fs-sub-icon">🎨</span>
+    <span class="fs-sub-title">今月の幸運アイテム</span>
+    <p class="fs-sub-body"><strong>吉色：</strong>赤・オレンジ・ゴールド<br><br><strong>開運アイテム：</strong>キャンドル・赤い花・鳳凰置物<br><br><strong>財運：</strong>積極的な行動が実を結ぶ月。</p>
+  </div>
+  <div class="fs-sub-card">
+    <span class="fs-sub-icon">🌿</span>
+    <span class="fs-sub-title">健康と生活の知恵</span>
+    <p class="fs-sub-body">心臓と血圧に注意を。適度な運動と水分補給を心がけて。<br><br><strong>ラッキーカラー：</strong>赤・橙・ゴールドが吉色<br><br><strong>恋愛：</strong>情熱的な出会いの予感。積極的に動いて◎</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-flower">🌸</div>
+  <p>このカレンダーは風水・四柱推命・六曜の知恵をもとに作成されています。<br>吉日と吉方位を活用して、最高の運気を引き寄せてください。</p>
+</footer>
+</div>
+<div class="modal-overlay" id="day-modal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal-box">
+    <div class="modal-top">
+      <button class="modal-close" onclick="document.getElementById('day-modal').classList.remove('open')">✕</button>
+      <div class="modal-date-str" id="m-date-str"></div>
+      <div class="modal-eto-str" id="m-eto-str"></div>
+      <div id="m-rokuyo-top"></div>
+    </div>
+    <div class="modal-body" id="m-modal-body"></div>
+  </div>
+</div>
+
+    <div class="modal-body">
+      <p style="font-size:15px;color:var(--ink-mid);line-height:1.9;margin-bottom:20px;">毎月その月の風水開運カレンダーを無料でお送りします。</p>
+      <input type="email" placeholder="your@email.com" id="email-input" style="width:100%;padding:14px 16px;border:2px solid var(--petal);border-radius:12px;font-size:16px;font-family:'Shippori Mincho B1',serif;outline:none;color:var(--ink);margin-bottom:14px;">
+      <button onclick="submitEmail()" style="width:100%;background:var(--month-grad);color:white;border:none;border-radius:12px;padding:16px;font-size:16px;font-family:'Shippori Mincho B1',serif;font-weight:700;letter-spacing:.2em;cursor:pointer;">✉️ 無料で登録する</button>
+      <p style="font-size:12px;color:var(--ink-soft);text-align:center;margin-top:10px;">※ いつでも解除できます</p>
+    </div>
+  </div>
+</div>
+<script>
+const TIAN_GAN=['甲','乙','丙','丁','戊','己','庚','辛','壬','癸'];
+const DI_ZHI=['子','丑','寅','卯','辰','巳','午','未','申','酉','戌','亥'];
+const GAN_ELEM=['木','木','火','火','土','土','金','金','水','水'];
+const ZHI_ELEM=['水','土','木','木','土','火','火','土','金','金','土','水'];
+const ROKUYO=['先勝','友引','先負','仏滅','大安','赤口'];
+const DOW=['日','月','火','水','木','金','土'];
+const YEAR=2026,MONTH=5;
+const TODAY=new Date();
+function getDayEto(y,m,d){const diff=Math.round((new Date(y,m-1,d)-new Date(1984,1,4))/86400000);const idx=((diff%60)+60)%60;return{eto:TIAN_GAN[idx%10]+DI_ZHI[idx%12],gan:TIAN_GAN[idx%10],zhi:DI_ZHI[idx%12],ganIdx:idx%10,zhiIdx:idx%12};}
+function getRokuyo(m,d){return ROKUYO[(m+d)%6];}
+function isLucky(gi){return[0,2,4,6,8].includes(gi);}
+function rokuyoCls(r){return{'大安':'ry-taian','友引':'ry-tomobiki','先勝':'ry-sensho','先負':'ry-senbu','仏滅':'ry-butsumetsu','赤口':'ry-shakku'}[r]||'';}
+function luckyColor(gi){return['青・緑','白・銀','赤・橙','紫・ピンク','黄・茶','黒・白','白・金','白・銀','黒・紺','青・紺'][gi];}
+function luckyDir(zi){return['北','北北東','東北東','東','東南東','南南東','南','南南西','西南西','西','西北西','北北西'][zi];}
+function luckyTime(zi){return['23〜1時','1〜3時','3〜5時','5〜7時','7〜9時','9〜11時','11〜13時','13〜15時','15〜17時','17〜19時','19〜21時','21〜23時'][zi];}
+function renderCalendar(){
+  const grid=document.getElementById('cal-grid');grid.innerHTML='';
+  const days=new Date(YEAR,MONTH,0).getDate(),start=new Date(YEAR,MONTH-1,1).getDay();
+  for(let i=0;i<start;i++){const b=document.createElement('div');b.className='cal-cell empty';grid.appendChild(b);}
+  for(let d=1;d<=days;d++){
+    const dow=(start+d-1)%7,eto=getDayEto(YEAR,MONTH,d),ry=getRokuyo(MONTH,d),lk=isLucky(eto.ganIdx);
+    const isToday=(YEAR===TODAY.getFullYear()&&MONTH===TODAY.getMonth()+1&&d===TODAY.getDate());
+    const cell=document.createElement('div');
+    let cls=['cal-cell'];
+    if(dow===0)cls.push('sun');if(dow===6)cls.push('sat');
+    if(isToday)cls.push('today');if(lk)cls.push('lucky-day');
+    cell.className=cls.join(' ');
+    cell.innerHTML=`<span class="day-num">${d}</span><span class="day-eto">${eto.eto}</span><span class="day-rokuyo ${rokuyoCls(ry)}">${ry}</span><span class="day-color-tip">${luckyColor(eto.ganIdx)}</span>`;
+    cell.addEventListener('click',()=>openModal(d,eto,ry,lk));
+    grid.appendChild(cell);
+  }
+}
+function openModal(d,eto,ry,lk){
+  const dt=new Date(YEAR,MONTH-1,d);
+  document.getElementById('m-date-str').textContent=`${YEAR}年${MONTH}月${d}日（${DOW[dt.getDay()]}）`;
+  document.getElementById('m-eto-str').textContent=eto.eto+' の日';
+  document.getElementById('m-rokuyo-top').innerHTML=`<span style="display:inline-block;background:rgba(255,255,255,.25);border-radius:20px;padding:4px 14px;font-size:14px;">${ry}</span>`;
+  document.getElementById('m-modal-body').innerHTML=`
+    <div class="modal-row"><div class="modal-row-icon">🔥</div><div><div class="modal-row-label">五　行</div><div class="modal-row-val">天干：${eto.gan}（${GAN_ELEM[eto.ganIdx]}）／地支：${eto.zhi}（${ZHI_ELEM[eto.zhiIdx]}）</div></div></div>
+    <div class="modal-row"><div class="modal-row-icon">🎨</div><div><div class="modal-row-label">今日の吉色</div><div class="modal-row-val">${luckyColor(eto.ganIdx)}</div></div></div>
+    <div class="modal-row"><div class="modal-row-icon">🧭</div><div><div class="modal-row-label">風水吉方位</div><div class="modal-row-val">${luckyDir(eto.zhiIdx)}</div></div></div>
+    <div class="modal-row"><div class="modal-row-icon">⏰</div><div><div class="modal-row-label">吉　時</div><div class="modal-row-val">${luckyTime(eto.zhiIdx)}</div></div></div>
+    <div class="modal-divider"></div>
+    <div class="modal-row"><div class="modal-row-icon">💬</div><div><div class="modal-row-label">今日のアドバイス</div><div class="modal-row-val">${dayAdvice(eto.ganIdx,ry)}</div></div></div>
+    ${lk?'<div class="modal-lucky-banner">✦ 本日は吉日です ✦<br>重要な行動・決断・発信に最適な一日</div>':''}`;
+  document.getElementById('day-modal').classList.add('open');
+}
+function dayAdvice(gi,ry){
+  const g=['創造と成長の気。新しいアイデアを種まきしよう。','柔軟さが鍵。人の意見を大切に聴く日。','情熱と行動力が高まる。チャンスを積極的に掴もう。','直感を信じて。感情豊かに過ごして。','地道な積み重ねが実を結ぶ日。','感謝と整理の日。不要なものを手放して。','決断と収穫の日。交渉ごとに吉。','美意識を磨く日。芸術に触れて。','浄化と新しい流れを呼ぶ日。','静かに内省する日。計画を見直そう。'][gi];
+  const r={'大安':'大安は万事に最吉！重要な決断・契約・出発に最良の日です。','友引':'友を引き寄せる日。仲間と協力する活動が吉。','先勝':'午前中に勝機あり！重要行動は午前中に。','先負':'焦りは禁物。午後から落ち着いて行動しましょう。','仏滅':'古いものを手放し、新たに踏み出す変革の日。','赤口':'正午頃のみ吉。それ以外は静かに過ごすと◎。'}[ry]||'';
+  return g+'<br>'+r;
+}
+function showEmailModal(){document.getElementById('email-modal').classList.add('open');}
+function submitEmail(){
+  const v=document.getElementById('email-input').value;
+  if(!v||!v.includes('@')){alert('正しいメールアドレスをご入力ください。');return;}
+  document.getElementById('email-modal').classList.remove('open');
+  alert('✨ ご登録ありがとうございます！\n毎月の開運カレンダーをお届けします。');
+}
+function downloadCalendar(){
+  const html=document.documentElement.outerHTML;
+  const blob=new Blob([html],{type:'text/html;charset=utf-8'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+  a.download=`風水開運カレンダー2026年5月.html`;a.click();URL.revokeObjectURL(a.href);
+}
+function shareCalendar(){
+  if(navigator.share){navigator.share({title:'風水開運カレンダー 2026年5月',text:'5月の風水開運カレンダーをシェアします🌸',url:location.href});}
+  else{navigator.clipboard.writeText(location.href).then(()=>alert('URLをコピーしました！'));}
+}
+renderCalendar();
+</script>
+</body>
+</html>
